@@ -10,6 +10,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/tablet.css" />
+    <link rel="stylesheet" href="./css/desctop.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,8 +20,8 @@
     />
   </head>
   <body>
-    <header class="header">
-      <div class="container">
+   <header class="header">
+      <div class="container header-container">
         <nav class="nav">
           <a href="./index.html" class="logo link header-logo"
             >Web<span class="logo-black">Studio</span></a
@@ -27,13 +29,11 @@
           <ul class="header-menu list">
             <li class="header-menu__item">
               <a href="./index.html" class="header-menu__link current link"
-                >Studio</a
-              >
+                >Studio</a>
             </li>
             <li class="header-menu__item">
-              <a href="./portfolio.html" class="header-menu__link link"
-                >Portfolio</a
-              >
+              <a href="./portf olio.html" class="header-menu__link link"
+                >Portfolio</a>
             </li>
             <li class="header-menu__item">
               <a href="" class="header-menu__link link">Contacts</a>
@@ -56,10 +56,83 @@
             </li>
           </ul>
         </address>
+        <button type="button" class="mobile-menu-btn" data-mobil-open>
+          <svg class="mobile-menu-btn-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu-hamburger"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mob-menu is-hidden" data-mobil>
+        <button type="button" class="mobil-close-btn" data-mobil-close>
+          <svg class="mobil-close-btn-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-modal"></use>
+          </svg>
+        </button>
+        <div>
+          <ul class="mob-address-list list">
+            <li class="mob-address-item">
+              <a class="tel-mob-address-link link" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="email-mob-address-item">
+              <a class="mob-address-link link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+</ul>
+          <ul class="mob-soc-list list">
+            <li class="mob-soc-item">
+              <a
+                href=""
+                class="mob-soc-link link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="mob-soc-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use></svg
+              ></a>
+            </li>
+            <li class="mob-soc-item">
+              <a
+                href=""
+                class="mob-soc-link link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="mob-soc-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-soc-item">
+              <a
+                href=""
+                class="mob-soc-link link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="mob-soc-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use></svg
+              ></a>
+            </li>
+            <li class="mob-soc-item">
+              <a
+                href=""
+                class="mob-soc-link link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="mob-soc-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
-      <section class="section hero">
+      <!-- <section class="section hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button
@@ -125,8 +198,8 @@
             </li>
           </ul>
         </div>
-      </section>
-      <section class="section services">
+      </section> -->
+      <!-- <section class="section services">
         <div class="container">
           <h2 class="services-title section-title">What are we doing</h2>
           <ul class="services-list list">
@@ -153,8 +226,8 @@
             </li>
           </ul>
         </div>
-      </section>
-      <section class="section team">
+      </section> -->
+      <!-- <section class="section team">
         <div class="container">
           <h2 class="team-title section-title">Our Team</h2>
           <ul class="team-list list">
@@ -462,8 +535,8 @@
           </ul>
         </div>
       </section>
-    </main>
-    <footer class="footer">
+    </main> -->
+    <!-- <footer class="footer">
       <div class="container footer-container">
         <div class="footer-info">
           <a href="./index.html" class="logo link footer-logo"
@@ -543,7 +616,7 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-button" data-modal-close>
@@ -628,5 +701,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobil.js"></script>
   </body>
 </html>
