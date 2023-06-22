@@ -1,14 +1,20 @@
-(() => {
-  const refs = {
-    openModalBtn: document.querySelector("[data-mobil-open]"),
-    closeModalBtn: document.querySelector("[data-mobil-close]"),
-    modal: document.querySelector("[data-mobil]"),
+const mobileMenu = document.querySelector('.js-menu-container');
+  const openMenuBtn = document.querySelector('.js-open-menu');
+  const closeMenuBtn = document.querySelector('.js-close-menu');
+
+const toggleMenu = () => {
+      document.body.classList.toggle("no-scroll");
+    mobileMenu.classList.toggle('is-open');
+
+
   };
 
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
+  openMenuBtn.addEventListener('click', toggleMenu);
+  closeMenuBtn.addEventListener('click', toggleMenu);
 
-  function toggleModal() {
-    refs.modal.classList.toggle("is-hidden");
-  }
-})();
+  // Close the mobile menu on wider screens if the device orientation changes
+  window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
+    if (!e.matches) return;
+    mobileMenu.classList.remove('is-open');
+   document.body.classList.remove("no-scroll");
+  });
